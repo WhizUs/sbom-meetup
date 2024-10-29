@@ -1,0 +1,24 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://openvex.dev/docs/public/vex-6cf742d7fdb7481109d3e0d49f10d9dc84d73b43b2ef2a53e77fd66cffd0b3bc",
+  "author": "Dimi",
+  "role": "VEX Report Faker",
+  "timestamp": "2024-10-29T00:46:01.073222+01:00",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2022-32149"
+      },
+      "timestamp": "2024-10-29T00:48:22.708538+01:00",
+      "products": [
+        {
+          "@id": "pkg:golang/golang.org/x/text@0.3.5"
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "The vulnerable function is not called"
+    }
+  ]
+}
