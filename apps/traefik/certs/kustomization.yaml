@@ -1,0 +1,11 @@
+namespace: traefik
+
+generatorOptions:
+  disableNameSuffixHash: true
+
+secretGenerator:
+- name: tls-cert
+  type: "kubernetes.io/tls"
+  files:
+  - tls.crt=local.computer.crt
+  - tls.key=local.computer.key

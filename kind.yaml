@@ -1,0 +1,13 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: sbom
+nodes:
+- role: control-plane
+  # port forward 443 on the host to 31337 on this node
+  # port 31337 on the node is the nodePort used by traefik
+  extraPortMappings:
+  - containerPort: 31337
+    hostPort: 443
+    # optional: set the bind address on the host
+    # 0.0.0.0 is the current default
+    # listenAddress: "127.0.0.1"

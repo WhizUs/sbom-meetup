@@ -1,0 +1,15 @@
+namespace: traefik
+
+resources:
+  - https://github.com/traefik/traefik-helm-chart/traefik/crds?ref=v33.0.0
+  - namespace.yaml
+  - certs
+  - ingressroutes/dashboard.yaml
+
+helmCharts:
+- name: traefik
+  releaseName: traefik
+  version: 33.0.0
+  repo: https://helm.traefik.io/traefik
+  namespace: traefik
+  valuesFile: values.yaml

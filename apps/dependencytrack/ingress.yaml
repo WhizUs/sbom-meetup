@@ -1,0 +1,21 @@
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: dtrack
+  namespace: dtrack
+spec:
+  tls: {}
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`dtrack.local.computer`)
+      kind: Rule
+      services:
+        - name: dependency-track-frontend
+          port: web
+    - match: Host(`dtrack.local.computer`) && (PathPrefix(`/api`) || PathPrefix(`/health`))
+      kind: Rule
+      services:
+        - name: dependency-track-api-server
+          port: web

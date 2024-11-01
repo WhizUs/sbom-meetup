@@ -1,0 +1,13 @@
+namespace: dtrack
+
+resources:
+  - namespace.yaml
+  - ingress.yaml
+
+helmCharts:
+- name: dependency-track
+  releaseName: dependency-track
+  version: 0.22.0
+  repo: https://dependencytrack.github.io/helm-charts
+  namespace: dtrack
+  valuesFile: values.yaml
