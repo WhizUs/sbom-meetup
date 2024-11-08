@@ -1,0 +1,165 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:b4469cd5-0c0e-49c1-8e2b-036183ad9756",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2024-11-08T12:48:46+01:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "syft",
+          "version": "1.16.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "13254d08f5d69d86",
+      "type": "file",
+      "name": "sbom-example",
+      "version": "v0.0.1"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:golang/command-line-arguments@(devel)?package-id=127818cbf19edc71",
+      "type": "library",
+      "name": "command-line-arguments",
+      "version": "(devel)",
+      "purl": "pkg:golang/command-line-arguments@(devel)",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-buildinfo-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/main"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "arm64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.23.2"
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "command-line-arguments"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/golang.org/x/text@v0.3.5?package-id=af8f8d8d648fd2c0",
+      "type": "library",
+      "name": "golang.org/x/text",
+      "version": "v0.3.5",
+      "cpe": "cpe:2.3:a:golang:text:v0.3.5:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/golang.org/x/text@v0.3.5",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-buildinfo-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/main"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "arm64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.23.2"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:i6eZZ+zk0SOf0xgBpEpPD18qWcJda6q1sxt3S0kzyUQ="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "command-line-arguments"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/stdlib@1.23.2?package-id=0d2564473e7d45bc",
+      "type": "library",
+      "name": "stdlib",
+      "version": "go1.23.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:golang:go:1.23.2:-:*:*:*:*:*:*",
+      "purl": "pkg:golang/stdlib@1.23.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-buildinfo-entry"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/main"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.23.2"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:golang/command-line-arguments@(devel)?package-id=127818cbf19edc71",
+      "dependsOn": [
+        "pkg:golang/golang.org/x/text@v0.3.5?package-id=af8f8d8d648fd2c0",
+        "pkg:golang/stdlib@1.23.2?package-id=0d2564473e7d45bc"
+      ]
+    }
+  ]
+}

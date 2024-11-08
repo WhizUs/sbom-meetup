@@ -1,0 +1,22 @@
+development: true
+
+# controlplane:
+#   ingress:
+#     enabled: true
+#     tls: true
+#     ingressClassName: traefik-internal
+#     hostname: api.chainloop.local.computer
+#   ingressAPI: 
+#     enabled: true
+#     tls: true
+#     ingressClassName: traefik-internal
+#     hostname: api.cp.chainloop.local.computer
+
+# cas:
+#   ingressAPI: 
+#     enabled: true
+#     tls: true
+#     ingressClassName: traefik-internal
+#     hostname: api.cas.chainloop.local.computer
+
+

@@ -1,0 +1,13 @@
+namespace: chainloop
+
+resources:
+  - namespace.yaml
+  # - ingress.yaml
+
+helmCharts:
+- name: chainloop
+  releaseName: chainloop
+  version: 1.123.0
+  repo: oci://ghcr.io/chainloop-dev/charts
+  namespace: chainloop
+  valuesFile: values.yaml
