@@ -1,0 +1,251 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:39494034-c796-43ad-a45a-7e292a890ce1",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2024-11-15T18:47:59+01:00",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "grype",
+          "version": "0.84.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "50e9fa48055ce48b",
+      "type": "container",
+      "name": "sbom",
+      "version": "v0.0.1"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:golang/golang.org/x/text@v0.3.5?package-id=3398d9b6556f9588",
+      "type": "library",
+      "name": "golang.org/x/text",
+      "version": "v0.3.5",
+      "cpe": "cpe:2.3:a:golang:text:v0.3.5:*:*:*:*:*:*:*",
+      "purl": "pkg:golang/golang.org/x/text@v0.3.5",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-buildinfo-entry"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:7fee709fba2455a42965a5efe7d337fc2dfd9bb276f75cd83588fb46f1e5372d"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "arm64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.23.2"
+        },
+        {
+          "name": "syft:metadata:h1Digest",
+          "value": "h1:i6eZZ+zk0SOf0xgBpEpPD18qWcJda6q1sxt3S0kzyUQ="
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "main"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/main@v0.0.0-20241115143759-1b31820b7133?package-id=cd6fe24a8ef6afd1",
+      "type": "library",
+      "name": "main",
+      "version": "v0.0.0-20241115143759-1b31820b7133",
+      "purl": "pkg:golang/main@v0.0.0-20241115143759-1b31820b7133",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-buildinfo-entry"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:7fee709fba2455a42965a5efe7d337fc2dfd9bb276f75cd83588fb46f1e5372d"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "arm64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.23.2"
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "main"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/stdlib@1.23.2?package-id=bf3b84e07ce24586",
+      "type": "library",
+      "name": "stdlib",
+      "version": "go1.23.2",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ],
+      "cpe": "cpe:2.3:a:golang:go:1.23.2:-:*:*:*:*:*:*",
+      "purl": "pkg:golang/stdlib@1.23.2",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-buildinfo-entry"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:7fee709fba2455a42965a5efe7d337fc2dfd9bb276f75cd83588fb46f1e5372d"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.23.2"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:golang/main@v0.0.0-20241115143759-1b31820b7133?package-id=cd6fe24a8ef6afd1",
+      "dependsOn": [
+        "pkg:golang/golang.org/x/text@v0.3.5?package-id=3398d9b6556f9588",
+        "pkg:golang/stdlib@1.23.2?package-id=bf3b84e07ce24586"
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "bom-ref": "urn:uuid:46928711-1c2e-4e51-8420-cfd863dcb7dc",
+      "id": "GHSA-69ch-w2m2-3vjp",
+      "source": {
+        "name": "github-language-go",
+        "url": "https://github.com/advisories/GHSA-69ch-w2m2-3vjp"
+      },
+      "references": [
+        {
+          "id": "GHSA-69ch-w2m2-3vjp",
+          "source": {
+            "name": "github-language-go",
+            "url": "https://github.com/advisories/GHSA-69ch-w2m2-3vjp"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "description": "golang.org/x/text/language Denial of service via crafted Accept-Language header",
+      "advisories": [
+        {
+          "url": "https://github.com/advisories/GHSA-69ch-w2m2-3vjp"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:golang/golang.org/x/text@v0.3.5?package-id=3398d9b6556f9588"
+        }
+      ]
+    },
+    {
+      "bom-ref": "urn:uuid:070a9fe3-45fe-4368-ac75-aaf591402d1f",
+      "id": "GHSA-ppp9-7jff-5vj2",
+      "source": {
+        "name": "github-language-go",
+        "url": "https://github.com/advisories/GHSA-ppp9-7jff-5vj2"
+      },
+      "references": [
+        {
+          "id": "GHSA-ppp9-7jff-5vj2",
+          "source": {
+            "name": "github-language-go",
+            "url": "https://github.com/advisories/GHSA-ppp9-7jff-5vj2"
+          }
+        }
+      ],
+      "ratings": [
+        {
+          "score": 7.5,
+          "severity": "high",
+          "method": "CVSSv31",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+        }
+      ],
+      "description": "golang.org/x/text/language Out-of-bounds Read vulnerability",
+      "advisories": [
+        {
+          "url": "https://github.com/advisories/GHSA-ppp9-7jff-5vj2"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:golang/golang.org/x/text@v0.3.5?package-id=3398d9b6556f9588"
+        }
+      ]
+    }
+  ]
+}
