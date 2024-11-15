@@ -2,7 +2,8 @@ namespace: chainloop
 
 resources:
   - namespace.yaml
-  # - ingress.yaml
+  - ingressroutes/cas.yaml
+  - ingressroutes/cp.yaml
 
 helmCharts:
 - name: chainloop

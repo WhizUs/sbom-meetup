@@ -1,9 +1,9 @@
 all: main.go
 	go build -o .output/main main.go
 	chmod +x .output/main
-	syft scan file:.output/main -o spdx-json=.output/spdx.json --source-name sbom-example --source-version v0.0.1
-	syft scan file:.output/main -o cyclonedx-json=.output/cyclonedx.json --source-name sbom-example --source-version v0.0.1
-	grype sbom:.output/cyclonedx.json -o cyclonedx-json=.output/cyclonedx.grype.json
+	syft scan file:.output/main -o spdx-json=.output/sbom-go-spdx.json --source-name sbom-example --source-version v0.0.1
+	syft scan file:.output/main -o cyclonedx-json=.output/sbom-go-cyclonedx.json --source-name sbom-example --source-version v0.0.1
+	grype sbom:.output/cyclonedx.json -o cyclonedx-json=.output/sbom-go-cyclonedx.grype.json
 	grype sbom:.output/cyclonedx.json -o sarif=.output/sarif.json
 
 docker:
