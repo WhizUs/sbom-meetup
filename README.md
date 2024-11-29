@@ -49,3 +49,16 @@ curl -X "PUT" "https://dtrack.local.computer/api/v1/bom" \
       \"bom\":\"$(cat sboms/sbom-go-cyclonedx.grype.json | base64)\"
   }"
 ```
+
+## VEX
+
+### create VEX reports
+
+```
+vexctl create --product=<package> --vuln=<vuln-id> --status=<status> --justification=<reason-of-status> --author=<author> > vex.json
+```
+
+Example:
+```
+vexctl create --product="pkg:golang/golang.org/x/text@0.3.5" --vuln="CVE-2022-32149" --status="not_affected" --justification="component_not_present" --author Julian > vex-new.json
+```

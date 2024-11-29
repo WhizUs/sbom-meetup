@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:f307901e-ca39-42cf-befe-1216dad7dc91",
+  "serialNumber": "urn:uuid:a40f2a7a-3c7f-4f40-a6de-68d023565123",
   "version": 1,
   "metadata": {
-    "timestamp": "2024-11-08T12:48:47+01:00",
+    "timestamp": "2024-11-26T19:08:03+01:00",
     "tools": {
       "components": [
         {
@@ -17,55 +17,15 @@
       ]
     },
     "component": {
-      "bom-ref": "21d5c3484a7b93af",
-      "type": "file",
-      "name": "sbom-example"
+      "bom-ref": "796def362b46992e",
+      "type": "container",
+      "name": "sbom",
+      "version": "v0.0.1"
     }
   },
   "components": [
     {
-      "bom-ref": "pkg:golang/command-line-arguments@(devel)?package-id=6ff9b9292113a999",
-      "type": "library",
-      "name": "command-line-arguments",
-      "version": "(devel)",
-      "purl": "pkg:golang/command-line-arguments@(devel)",
-      "properties": [
-        {
-          "name": "syft:package:foundBy",
-          "value": "go-module-binary-cataloger"
-        },
-        {
-          "name": "syft:package:language",
-          "value": "go"
-        },
-        {
-          "name": "syft:package:type",
-          "value": "go-module"
-        },
-        {
-          "name": "syft:package:metadataType",
-          "value": "go-module-buildinfo-entry"
-        },
-        {
-          "name": "syft:location:0:path",
-          "value": "/main"
-        },
-        {
-          "name": "syft:metadata:architecture",
-          "value": "arm64"
-        },
-        {
-          "name": "syft:metadata:goCompiledVersion",
-          "value": "go1.23.2"
-        },
-        {
-          "name": "syft:metadata:mainModule",
-          "value": "command-line-arguments"
-        }
-      ]
-    },
-    {
-      "bom-ref": "pkg:golang/golang.org/x/text@v0.3.5?package-id=af8f8d8d648fd2c0",
+      "bom-ref": "pkg:golang/golang.org/x/text@v0.3.5?package-id=3398d9b6556f9588",
       "type": "library",
       "name": "golang.org/x/text",
       "version": "v0.3.5",
@@ -89,8 +49,12 @@
           "value": "go-module-buildinfo-entry"
         },
         {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:294305d4ba2c2db63636d126ed76c51001c0784fab4294e08c30fa5ab9ccb071"
+        },
+        {
           "name": "syft:location:0:path",
-          "value": "/main"
+          "value": "/bin"
         },
         {
           "name": "syft:metadata:architecture",
@@ -106,12 +70,57 @@
         },
         {
           "name": "syft:metadata:mainModule",
-          "value": "command-line-arguments"
+          "value": "main"
         }
       ]
     },
     {
-      "bom-ref": "pkg:golang/stdlib@1.23.2?package-id=0d2564473e7d45bc",
+      "bom-ref": "pkg:golang/main@v0.0.0-20241115181156-5078e555cdfd?package-id=6a98b0e651a23e37",
+      "type": "library",
+      "name": "main",
+      "version": "v0.0.0-20241115181156-5078e555cdfd",
+      "purl": "pkg:golang/main@v0.0.0-20241115181156-5078e555cdfd",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "go-module-binary-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "go"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "go-module"
+        },
+        {
+          "name": "syft:package:metadataType",
+          "value": "go-module-buildinfo-entry"
+        },
+        {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:294305d4ba2c2db63636d126ed76c51001c0784fab4294e08c30fa5ab9ccb071"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/bin"
+        },
+        {
+          "name": "syft:metadata:architecture",
+          "value": "arm64"
+        },
+        {
+          "name": "syft:metadata:goCompiledVersion",
+          "value": "go1.23.2"
+        },
+        {
+          "name": "syft:metadata:mainModule",
+          "value": "main"
+        }
+      ]
+    },
+    {
+      "bom-ref": "pkg:golang/stdlib@1.23.2?package-id=bf3b84e07ce24586",
       "type": "library",
       "name": "stdlib",
       "version": "go1.23.2",
@@ -142,8 +151,12 @@
           "value": "go-module-buildinfo-entry"
         },
         {
+          "name": "syft:location:0:layerID",
+          "value": "sha256:294305d4ba2c2db63636d126ed76c51001c0784fab4294e08c30fa5ab9ccb071"
+        },
+        {
           "name": "syft:location:0:path",
-          "value": "/main"
+          "value": "/bin"
         },
         {
           "name": "syft:metadata:goCompiledVersion",
@@ -154,27 +167,27 @@
   ],
   "dependencies": [
     {
-      "ref": "pkg:golang/command-line-arguments@(devel)?package-id=6ff9b9292113a999",
+      "ref": "pkg:golang/main@v0.0.0-20241115181156-5078e555cdfd?package-id=6a98b0e651a23e37",
       "dependsOn": [
-        "pkg:golang/golang.org/x/text@v0.3.5?package-id=af8f8d8d648fd2c0",
-        "pkg:golang/stdlib@1.23.2?package-id=0d2564473e7d45bc"
+        "pkg:golang/golang.org/x/text@v0.3.5?package-id=3398d9b6556f9588",
+        "pkg:golang/stdlib@1.23.2?package-id=bf3b84e07ce24586"
       ]
     }
   ],
   "vulnerabilities": [
     {
-      "bom-ref": "urn:uuid:1e35d567-8893-4c99-80e9-cfd415b09b4a",
-      "id": "GHSA-69ch-w2m2-3vjp",
+      "bom-ref": "urn:uuid:2dd2539f-4396-49ea-895c-71cee97f5091",
+      "id": "CVE-2021-38561",
       "source": {
-        "name": "github-language-go",
-        "url": "https://github.com/advisories/GHSA-69ch-w2m2-3vjp"
+        "name": "nvd-cpe",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-38561"
       },
       "references": [
         {
-          "id": "GHSA-69ch-w2m2-3vjp",
+          "id": "CVE-2021-38561",
           "source": {
-            "name": "github-language-go",
-            "url": "https://github.com/advisories/GHSA-69ch-w2m2-3vjp"
+            "name": "nvd-cpe",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-38561"
           }
         }
       ],
@@ -186,31 +199,40 @@
           "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
-      "description": "golang.org/x/text/language Denial of service via crafted Accept-Language header",
+      "description": "golang.org/x/text/language in golang.org/x/text before 0.3.7 can panic with an out-of-bounds read during BCP 47 language tag parsing. Index calculation is mishandled. If parsing untrusted user input, this can be used as a vector for a denial-of-service attack.",
       "advisories": [
         {
-          "url": "https://github.com/advisories/GHSA-69ch-w2m2-3vjp"
+          "url": "https://deps.dev/advisory/OSV/GO-2021-0113"
+        },
+        {
+          "url": "https://go.googlesource.com/text/+/383b2e75a7a4198c42f8f87833eefb772868a56f"
+        },
+        {
+          "url": "https://groups.google.com/g/golang-announce"
+        },
+        {
+          "url": "https://pkg.go.dev/golang.org/x/text/language"
         }
       ],
       "affects": [
         {
-          "ref": "pkg:golang/golang.org/x/text@v0.3.5?package-id=af8f8d8d648fd2c0"
+          "ref": "pkg:golang/golang.org/x/text@v0.3.5?package-id=3398d9b6556f9588"
         }
       ]
     },
     {
-      "bom-ref": "urn:uuid:b6bdfc18-e8c5-4e54-a0a5-d44d75db6b2c",
-      "id": "GHSA-ppp9-7jff-5vj2",
+      "bom-ref": "urn:uuid:9ded8b84-5eb9-49d3-bcab-1438e37fadb5",
+      "id": "CVE-2022-32149",
       "source": {
-        "name": "github-language-go",
-        "url": "https://github.com/advisories/GHSA-ppp9-7jff-5vj2"
+        "name": "nvd-cpe",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-32149"
       },
       "references": [
         {
-          "id": "GHSA-ppp9-7jff-5vj2",
+          "id": "CVE-2022-32149",
           "source": {
-            "name": "github-language-go",
-            "url": "https://github.com/advisories/GHSA-ppp9-7jff-5vj2"
+            "name": "nvd-cpe",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-32149"
           }
         }
       ],
@@ -222,15 +244,24 @@
           "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
         }
       ],
-      "description": "golang.org/x/text/language Out-of-bounds Read vulnerability",
+      "description": "An attacker may cause a denial of service by crafting an Accept-Language header which ParseAcceptLanguage will take significant time to parse.",
       "advisories": [
         {
-          "url": "https://github.com/advisories/GHSA-ppp9-7jff-5vj2"
+          "url": "https://go.dev/cl/442235"
+        },
+        {
+          "url": "https://go.dev/issue/56152"
+        },
+        {
+          "url": "https://groups.google.com/g/golang-announce/c/-hjNw559_tE/m/KlGTfid5CAAJ"
+        },
+        {
+          "url": "https://pkg.go.dev/vuln/GO-2022-1059"
         }
       ],
       "affects": [
         {
-          "ref": "pkg:golang/golang.org/x/text@v0.3.5?package-id=af8f8d8d648fd2c0"
+          "ref": "pkg:golang/golang.org/x/text@v0.3.5?package-id=3398d9b6556f9588"
         }
       ]
     }
